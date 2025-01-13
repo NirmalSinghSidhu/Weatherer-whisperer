@@ -1,0 +1,116 @@
+/* General Theme Styles */
+.weather-app {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.weather-app.light {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.weather-app.dark {
+  background-color: #1c1e22;
+  color: #f8f9fa;
+}
+
+/* Header Section */
+h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h6 {
+  padding: auto;
+  margin-bottom: 20px;
+}
+
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.weather-app.dark .btn-outline-secondary {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.weather-app.dark .btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Card Styles */
+.weather-card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 5px 5px 15px #cccccc, -5px -5px 15px #ffffff;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.weather-card.dark {
+  background: linear-gradient(145deg, #1f2125, #27292d);
+  box-shadow: 5px 5px 15px #1a1c20, -5px -5px 15px #2c2e34;
+}
+
+/* Forecast Cards */
+.forecast-card {
+  border: none;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.weather-app.dark .forecast-card {
+  background-color: #2d2f33;
+  color: #f8f9fa;
+}
+
+/* Input Group Styling */
+.input-group .form-control {
+  border-radius: 30px 0 0 30px;
+  border: 2px solid #007bff;
+}
+
+.input-group .btn-primary {
+  border-radius: 0 30px 30px 0;
+  font-weight: bold;
+}
+
+.weather-app.dark .form-control {
+  border: 2px solid #6c757d;
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-card,
+.forecast-card {
+  animation: fadeIn 0.8s ease-in-out;
+}
